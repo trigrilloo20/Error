@@ -7,15 +7,15 @@ import { AlertCircle, CheckCircle2, Database, HardDrive, Server, Wrench } from '
 
 export default function Home() {
   const damagedNodes = [
-    { id: 'US-1', name: 'Oregon', status: 'Recuperando', progress: 0, total: 270 },
+    { id: 'US-1', name: 'Miami', status: 'Recuperando', progress: 0, total: 270 },
     { id: 'US-2', name: 'California', status: 'Recuperando', progress: 0, total: 270 },
-    { id: 'US-3', name: 'Virginia', status: 'Recuperando', progress: 0, total: 270 },
+    { id: 'US-3', name: 'Miami', status: 'Recuperando', progress: 0, total: 270 },
     { id: 'US-4', name: 'Texas', status: 'Recuperando', progress: 0, total: 270 },
   ]
 
   const healthyNodes = [
-    { id: 'US-5', name: 'Nueva York', status: 'Operativo', progress: 100 },
-    { id: 'US-6', name: 'Florida', status: 'Operativo', progress: 100 },
+    { id: 'US-5', name: 'Miami', status: 'Operativo', progress: 100 },
+    { id: 'US-6', name: 'Miami', status: 'Operativo', progress: 100 },
   ]
 
   return (
