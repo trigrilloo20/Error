@@ -6,16 +6,16 @@ import { Badge } from '@/components/ui/badge'
 import { AlertCircle, CheckCircle2, Database, HardDrive, Server, Wrench } from 'lucide-react'
 
 export default function Home() {
-  const healthyNodes = [
-    { id: 'US-1', name: 'Oregon', status: 'Operativo' },
-    { id: 'US-2', name: 'California', status: 'Operativo' },
-    { id: 'US-3', name: 'Virginia', status: 'Operativo' },
-    { id: 'US-4', name: 'Texas', status: 'Operativo' },
+  const damagedNodes = [
+    { id: 'US-1', name: 'Oregon', status: 'Recuperando', progress: 0, total: 270 },
+    { id: 'US-2', name: 'California', status: 'Recuperando', progress: 0, total: 270 },
+    { id: 'US-3', name: 'Virginia', status: 'Recuperando', progress: 0, total: 270 },
+    { id: 'US-4', name: 'Texas', status: 'Recuperando', progress: 0, total: 270 },
   ]
 
-  const damagedNodes = [
-    { id: 'US-5', name: 'Nueva York', status: 'Recuperando', progress: 0, total: 200 },
-    { id: 'US-6', name: 'Florida', status: 'Recuperando', progress: 0, total: 200 },
+  const healthyNodes = [
+    { id: 'US-5', name: 'Nueva York', status: 'Operativo', progress: 100 },
+    { id: 'US-6', name: 'Florida', status: 'Operativo', progress: 100 },
   ]
 
   return (
@@ -87,40 +87,6 @@ export default function Home() {
             </CardContent>
           </Card>
 
-          {/* Healthy Nodes */}
-          <Card className="bg-[#12101a]/80 border-green-500/30 shadow-[0_0_15px_rgba(34,197,94,0.1)]">
-            <CardContent className="p-6">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="p-2 rounded-lg bg-green-500/20">
-                  <CheckCircle2 className="w-5 h-5 text-green-500" />
-                </div>
-                <h3 className="text-lg font-semibold text-white">Nodos Operativos</h3>
-                <Badge variant="outline" className="bg-green-500/20 text-green-400 border-green-500/30 ml-auto">
-                  Sin danos
-                </Badge>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {healthyNodes.map((node) => (
-                  <div 
-                    key={node.id}
-                    className="flex items-center justify-between p-4 rounded-lg bg-[#1a1525] border border-green-500/20"
-                  >
-                    <div className="flex items-center gap-3">
-                      <Database className="w-5 h-5 text-green-500" />
-                      <div>
-                        <span className="font-medium text-white">{node.id}</span>
-                        <span className="text-gray-400 text-sm ml-2">({node.name})</span>
-                      </div>
-                    </div>
-                    <Badge className="bg-green-500/20 text-green-400 border-0">
-                      {node.status}
-                    </Badge>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-
           {/* Damaged Nodes */}
           <Card className="bg-[#12101a]/80 border-orange-500/30 shadow-[0_0_15px_rgba(249,115,22,0.1)]">
             <CardContent className="p-6">
@@ -155,7 +121,7 @@ export default function Home() {
                       <div className="flex justify-between text-sm">
                         <span className="text-gray-400">Archivos recuperados</span>
                         <span className="text-orange-400 font-medium">
-                          {node.progress}/{node.total} aprox
+                          {node.progress}/{node.total} GS aprox
                         </span>
                       </div>
                       <Progress 
@@ -163,6 +129,40 @@ export default function Home() {
                         className="h-2 bg-[#2a1f3d]"
                       />
                     </div>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Healthy Nodes */}
+          <Card className="bg-[#12101a]/80 border-green-500/30 shadow-[0_0_15px_rgba(34,197,94,0.1)]">
+            <CardContent className="p-6">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-2 rounded-lg bg-green-500/20">
+                  <CheckCircle2 className="w-5 h-5 text-green-500" />
+                </div>
+                <h3 className="text-lg font-semibold text-white">Nodos Operativos</h3>
+                <Badge variant="outline" className="bg-green-500/20 text-green-400 border-green-500/30 ml-auto">
+                  Sin danos
+                </Badge>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {healthyNodes.map((node) => (
+                  <div 
+                    key={node.id}
+                    className="flex items-center justify-between p-4 rounded-lg bg-[#1a1525] border border-green-500/20"
+                  >
+                    <div className="flex items-center gap-3">
+                      <Database className="w-5 h-5 text-green-500" />
+                      <div>
+                        <span className="font-medium text-white">{node.id}</span>
+                        <span className="text-gray-400 text-sm ml-2">({node.name})</span>
+                      </div>
+                    </div>
+                    <Badge className="bg-green-500/20 text-green-400 border-0">
+                      {node.status} 100%
+                    </Badge>
                   </div>
                 ))}
               </div>
