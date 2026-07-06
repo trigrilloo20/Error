@@ -10,7 +10,7 @@ export default function Home() {
     { id: 'US-1', name: 'Miami', status: 'Recuperando', progress: 0, total: 270 },
     { id: 'US-2', name: 'California', status: 'Recuperando', progress: 0, total: 270 },
     { id: 'US-3', name: 'Miami', status: 'Recuperando', progress: 0, total: 270 },
-    { id: 'US-4', name: 'Texas', status: 'Recuperando', progress: 0, total: 270 },
+    { id: 'US-4', name: 'Miami', status: 'Recuperando', progress: 0, total: 270 },
   ]
 
   const healthyNodes = [
