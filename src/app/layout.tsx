@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Power by Saturn nodes",
     description: "AI-powered development with modern React stack",
-    url: "https://chat.z.ai",
-    siteName: "Z.ai",
+    url: "https://cdn.discordapp.com/attachments/1522976382496280576/1523680894769041538/Screenshot_20260706_072241_Chrome2.jpg?ex=6a4cfde9&is=6a4bac69&hm=5d1731c0665f8582763f0eb102a5e36a763a39e2d5f6a5c07317047b827c1292&",
+    siteName: "Saturn Nodes",
     type: "website",
   },
   twitter: {
