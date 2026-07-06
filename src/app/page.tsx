@@ -77,7 +77,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-[#bf00ff] animate-pulse"></div>
-                  <span>Migracion en progreso a nueva infraestructura</span>
+                  <span>Recuperando infraestructura</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-[#bf00ff] animate-pulse"></div>
